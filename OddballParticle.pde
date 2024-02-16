@@ -1,5 +1,7 @@
 class OddballParticle extends Particle {
   
+  float spriteScale = 0.05;
+  
   OddballParticle() {
     super();
   }
@@ -11,8 +13,7 @@ class OddballParticle extends Particle {
   }
   
   void show() {
-    fill(255);
-    square(x,y, len * 2);
+    image(shipSprite, x, y, shipSprite.width * spriteScale, shipSprite.height * spriteScale);
   }
   
   void tick() {

@@ -1,6 +1,9 @@
 ArrayList<Particle> particles;
 
+PImage shipSprite;
+
 void setup() {
+  shipSprite = loadImage("ufo.png");
   particles = new ArrayList<Particle>();
   particles.add(new OddballParticle());
 	size(600, 600);
