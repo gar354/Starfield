@@ -1,5 +1,4 @@
-class Particle
-{
+class Particle {
   float len;
   float x;
   float y;
@@ -12,14 +11,16 @@ class Particle
     y = height * 0.5;
     particleColor = getRandomColor();
     len = 5.0;
-    speed = Math.max((float)Math.random(), 0.3) * 10;
-    angle = (float)(Math.random() * 2 * PI);;
+    speed = Math.max((float)Math.random(), 0.3) * 5;
+    angle = (float)(Math.random() * 2 * PI);
   }
   
   void show() {
-    float mappedDist = map(dist(x,y, height * 0.5, height * 0.5), 0, width, 30, 255);
+    float _dist = dist(x,y, height * 0.5, height * 0.5);
+    float mappedDist = map(_dist, 0, width, 30, 255);
+    float sizeMappedDist = map(_dist, 0, width, 1, 4) * 2;
     fill(particleColor, mappedDist);
-    ellipse(x, y, len * 2, len * 2);
+    ellipse(x, y, len * sizeMappedDist, len * sizeMappedDist);
   }
   
   void tick() {

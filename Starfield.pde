@@ -1,6 +1,3 @@
-
-
-//static final int particleAmount = 100;
 ArrayList<Particle> particles;
 
 void setup() {
@@ -21,7 +18,10 @@ void draw() {
     particle.tick();
     particle.show();
   }
-  
+}
+
+void mousePressed() {
+  particles.add(new OddballParticle(mouseX, mouseY));
 }
 
 color getRandomColor() {

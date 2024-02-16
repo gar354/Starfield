@@ -4,6 +4,12 @@ class OddballParticle extends Particle {
     super();
   }
   
+  OddballParticle(float _x, float _y) {
+    super();
+    x = _x;
+    y = _y;
+  }
+  
   void show() {
     fill(255);
     square(x,y, len * 2);
