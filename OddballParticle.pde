@@ -13,7 +13,9 @@ class OddballParticle extends Particle {
   }
   
   void show() {
-    image(shipSprite, x, y, shipSprite.width * spriteScale, shipSprite.height * spriteScale);
+    float _width = shipSprite.width * spriteScale;
+    float _height = shipSprite.height * spriteScale;
+    image(shipSprite, x - (_width * 0.5), y - (_height * 0.5), _width, _height);
   }
   
   void tick() {
